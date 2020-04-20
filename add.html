@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCards</title>
+    <link rel="stylesheet" type="text/css" href="/static/my_style.css">
+</head>
+
+<body>
+    <input type="text" id="container-top" class="container container-half container-blue-red" placeholder="слово">
+    <input type="text" id="container-down" class="container container-half container-white-blue" placeholder="word">
+</body>
+<script src="/static/main.js"></script>
+<script>
+    var swiper = new Swipe('body');
+    swiper.onLeft(function() {
+        alert('You swiped left.')
+    });
+    swiper.run();
+</script>
+
+</html>

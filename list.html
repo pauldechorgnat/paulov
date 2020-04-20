@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCards</title>
+    <link rel="stylesheet" type="text/css" href="/static/my_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <table id="translation-table">
+        <tr>
+            <th id="ru-col" class="left-col">
+                <input type="text" id="lookup-table-input-ru" class="container container-blue-red header" placeholder="Pусский">
+            </th>
+            <th id="en-col" class="right-col">
+                <input type="text" id="lookup-table-input-en" class="container container-blue-red header" placeholder="English">
+            </th>
+        </tr>
+        <tbody id="translation-table-content">
+        </tbody>
+    </table>
+    </div>
+</body>
+<script src="/static/main.js"></script>
+<script>
+    document.getElementById('lookup-table-input-ru').addEventListener('keyup', function(event) {
+        filterTable('translation-table-content', 'lookup-table-input-ru')
+    })
+    document.getElementById('lookup-table-input-en').addEventListener('keyup', function(event) {
+        filterTable('translation-table-content', 'lookup-table-input-en')
+    })
+
+
+    var data = getData('/data/data.json');
+    populateTable('translation-table-content', data);
+
+    var swiper = new Swipe('body');
+    swiper.onRight = leftSwipeTable;
+    swiper.onLeft = rightSwipeTable;
+    swiper.run();
+</script>
+
+
+</html>

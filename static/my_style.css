@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* base container */
+
+.container {
+    display: block;
+    border: none;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 10vh;
+    overflow-wrap: break-word;
+}
+
+
+/* height */
+
+.container-half {
+    height: 50vh;
+}
+
+.container-third {
+    height: 23vh;
+    padding-top: 10vh;
+}
+
+.container-third:last-child {
+    height: 34vh;
+}
+
+.container-full {
+    padding-top: 40vh;
+    height: 60vh;
+}
+
+
+/* colors */
+
+.container-blue-white,
+.container-blue-white::placeholder {
+    background-color: #0f117a;
+    color: white;
+}
+
+.container-red-white,
+.container-red-white::placeholder {
+    background-color: red;
+    color: white;
+}
+
+.container-white-red,
+.container-white-red::placeholder {
+    background-color: white;
+    color: red;
+}
+
+.container-white-blue,
+.container-white-blue::placeholder {
+    background-color: white;
+    color: #0f117a;
+}
+
+.container-blue-red,
+.container-blue-red::placeholder {
+    background-color: #0f117a;
+    color: red;
+}
+
+.header {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    height: 100%;
+    font-size: 5vh;
+}
+
+table {
+    margin: 0% auto;
+    padding: 5vh;
+    font-size: 5vh;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    width: 100%;
+    text-align: center;
+    font-size: 4vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    /* border-bottom: red solid 2px; */
+}
+
+th {
+    padding: 0;
+}
+
+tr {
+    background-color: white;
+    color: #0f117a;
+    border-bottom: #ddd solid 1px;
+}
+
+.hidden {
+    display: none;
+}

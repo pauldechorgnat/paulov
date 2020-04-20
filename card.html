@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCards</title>
+    <link rel="stylesheet" type="text/css" href="/static/my_style.css">
+</head>
+
+<body>
+    <div id="card-front" class="container container-full container-blue-red">
+        слово
+    </div>
+    <div id="card-back" class="container container-full container-white-blue hidden">
+        word
+    </div>
+</body>
+<script src="/static/main.js"></script>
+<script>
+    document.getElementById('card-front').onclick = function(event) {
+        event.srcElement.classList.add('hidden')
+        document.getElementById('card-back').classList.remove('hidden')
+    }
+    document.getElementById('card-back').onclick = function(event) {
+        event.srcElement.classList.add('hidden')
+        document.getElementById('card-front').classList.remove('hidden')
+    }
+
+    var data = getData('/data/data.json')
+
+    nextCard = function() {
+        var index = Math.floor(Math.random() * data.length);
+        document.getElementById('card-front').innerText = data[index]['translation'];
+        document.getElementById('card-back').innerText = data[index]['word'];
+    }
+
+    var swiper = new Swipe('body');
+    swiper.onLeft = nextCard;
+    swiper.onRight = nextCard;
+    swiper.run();
+</script>
+
+</html>
