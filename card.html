@@ -27,7 +27,7 @@
         document.getElementById('card-front').classList.remove('hidden')
     }
 
-    var data = getData('/data/data.json')
+    var data = getData('/static/data.json')
 
     nextCard = function() {
         var index = Math.floor(Math.random() * data.length);
