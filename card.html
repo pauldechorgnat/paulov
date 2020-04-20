@@ -44,6 +44,8 @@
     var swiper = new Swipe('body');
     swiper.onLeft = nextCard;
     swiper.onRight = nextCard;
+    swiper.onUp = turnCard;
+    swiper.onDown = turnCard;
     swiper.run();
 
     // for browser

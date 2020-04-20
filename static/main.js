@@ -3,7 +3,7 @@ class Swipe {
         this.xDown = null;
         this.yDown = null;
         this.element = typeof(element) === 'string' ? document.querySelector(element) : element;
-        this.percentage = 20.;
+        this.percentage = 10.;
     }
 
     touchStart(event) {
