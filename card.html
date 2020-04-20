@@ -27,6 +27,8 @@
         document.getElementById('card-front').classList.remove('hidden')
     }
 
+    document.body.addEventListener('dblclick', nextCard)
+
     var data = getData('/static/data.json')
 
     nextCard = function() {
